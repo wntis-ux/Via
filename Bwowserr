@@ -10,7 +10,7 @@ echo "3) Brave"
 echo "4) Kiwi"
 echo "5) Via Browser 🔥"
 echo "=============================="
-read -p "Choose: " c
+read -p "Choose: " c </dev/tty
 
 dir="$HOME/browser_apk"
 mkdir -p $dir
@@ -24,13 +24,10 @@ download() {
 }
 
 case $c in
-
 1) download chrome https://github.com/hemker/apk-store/raw/main/chrome.apk ;;
 2) download firefox https://github.com/hemker/apk-store/raw/main/firefox.apk ;;
 3) download brave https://github.com/hemker/apk-store/raw/main/brave.apk ;;
 4) download kiwi https://github.com/hemker/apk-store/raw/main/kiwi.apk ;;
 5) download via https://github.com/hemker/apk-store/raw/main/via.apk ;;
-
 *) echo "Error";;
-
 esac
